@@ -8,12 +8,15 @@ const DayDetailsScreen = () => {
       <Text style={{ fontFamily: "AmaticBold", fontSize: 60 }}>
         React Native & Expo Setup
       </Text>
-      <Text style={{ fontFamily: "Inter", fontSize: 30 }}>Advent Calendar</Text>
+      <Text style={{ paddingBottom: 5, fontFamily: "Inter", fontSize: 30 }}>
+        Advent Calendar
+      </Text>
       <View>
-        <Text>
+        <Text style={{ padding: 7 }}>
           Today an Advent Calendar for the projects that will be built during
           this entire month was created. Setup the environment for both React
-          Native & Expo.
+          Native & Expo. During this I added both the Amatic & Inter fonts from
+          Google.
         </Text>
       </View>
     </View>
