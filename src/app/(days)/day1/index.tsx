@@ -4,7 +4,7 @@ import { Stack } from "expo-router";
 const DayDetailsScreen = () => {
   return (
     <View>
-      <Stack.Screen options={{ title: "Day 1" }} />
+      <Stack.Screen options={{ title: "Day 1: Avent Calendar" }} />
       <Text style={{ fontFamily: "AmaticBold", fontSize: 60 }}>
         React Native & Expo Setup
       </Text>
