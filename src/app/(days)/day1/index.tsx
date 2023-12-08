@@ -12,8 +12,8 @@ const DayDetailsScreen = () => {
       <Text style={{ fontFamily: "Inter", fontSize: 30 }}>Advent Calendar</Text>
       <View>
         <Text>
-          Today we built an Advent Calendar for the projects that will be built
-          during this entire month. We also set up the environment for both
+          Today an Advent Calendar for the projects that will be built during
+          this entire month was created. We also set up the environment for both
           React Native & Expo.
         </Text>
       </View>
