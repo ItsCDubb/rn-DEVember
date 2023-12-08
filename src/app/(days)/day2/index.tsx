@@ -1,10 +1,16 @@
-import { Text, View } from "react-native";
-import React from "react";
+import { Button, Text, View } from "react-native";
+import { Link, Stack } from "expo-router";
 
 const DayDetailsScreen = () => {
   return (
     <View>
-      <Text>Day Details Screen</Text>
+      <Stack.Screen options={{ title: "Day 2: Onboarding" }} />
+      <Text style={{ fontFamily: "AmaticBold", fontSize: 60 }}>
+        Animated Onboarding Flow
+      </Text>
+      <Link href="/day2/onboarding" asChild>
+        <Button title="Onboarding Screens" />
+      </Link>
     </View>
   );
 };
