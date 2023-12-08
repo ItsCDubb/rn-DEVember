@@ -13,8 +13,8 @@ const DayDetailsScreen = () => {
       <View>
         <Text>
           Today an Advent Calendar for the projects that will be built during
-          this entire month was created. The environment for both React Native &
-          Expo.
+          this entire month was created. Setup the environment for both React
+          Native & Expo.
         </Text>
       </View>
     </View>
