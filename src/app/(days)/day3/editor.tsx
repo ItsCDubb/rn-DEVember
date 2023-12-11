@@ -9,6 +9,7 @@ import {
 import Markdown from "react-native-markdown-display";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 import { useState } from "react";
+import { Stack } from "expo-router";
 import styles from "./editorStyles";
 
 const template = `# 🎉 Fun with Markdown!
@@ -62,6 +63,7 @@ const EditorScreen = () => {
   const [tab, setTab] = useState("edit");
   return (
     <View style={styles.page}>
+      <Stack.Screen options={{ title: "Day 3: Markdown Editor" }} />
       <View style={styles.tabsContainer}>
         <Pressable
           onPress={() => setTab("edit")}
