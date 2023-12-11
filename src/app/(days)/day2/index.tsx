@@ -1,4 +1,4 @@
-import { Button, Text, View } from "react-native";
+import { Button, SafeAreaView, Text, View } from "react-native";
 import { Link, Stack } from "expo-router";
 
 const DayDetailsScreen = () => {
