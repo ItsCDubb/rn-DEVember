@@ -4,7 +4,7 @@ import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 import styles from "./styles";
 
 const description = `
-# Animated splash screen
+# Splashscreen
 📚 Today's Agenda:
 - Overview of Splash Screens in Apps
 - Setting Up the Default Splash Screen
@@ -17,7 +17,7 @@ const description = `
 const DayDetailsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack.Screen options={{ title: "Day 4: Animated Splash Screen" }} />
+      <Stack.Screen options={{ title: "Day 4: Splashscreen" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
       <Link href="/day4/animation" asChild>
         <Button title="Animation" />

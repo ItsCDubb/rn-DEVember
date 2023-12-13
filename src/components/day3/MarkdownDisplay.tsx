@@ -6,7 +6,7 @@ import { PropsWithChildren } from "react";
 const markdownStyles = StyleSheet.create({
   heading1: {
     color: "#212020",
-    fontFamily: "InterBlack",
+    fontFamily: "AmaticBold",
     fontSize: 40,
     marginTop: 15,
     marginBottom: 10,

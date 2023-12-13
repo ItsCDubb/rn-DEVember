@@ -3,24 +3,25 @@ import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 
 const description = `
-# Onboarding
+# Maps
 
 📚 Today's Agenda:
-- Introduction to Onboarding Flows
-- Design Principles for Onboarding Screens
-- Exploring Reanimated Library
-- Building Your First Animated Onboarding Screen
-- Enhancing User Experience with Layout Animations
-- Interactive Session: Q&A and Live Coding
+- Introduction to React Native Maps
+- Setting Up Map Views in Expo
+- Adding Points of Interest to the Map
+- Creating a Scrollable Carousel for POIs
+- Synchronizing the Carousel with the Map
+- Styling Map Components
+- Handling User Interaction with Map and List
 `;
 
 const DayDetailsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack.Screen options={{ title: "Day 2: Onboarding" }} />
+      <Stack.Screen options={{ title: "Day 5: Maps" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
-      <Link href="/day2/onboarding" asChild>
-        <Button title="Onboarding" />
+      <Link href="/day5/map" asChild>
+        <Button title="Map" />
       </Link>
     </SafeAreaView>
   );
