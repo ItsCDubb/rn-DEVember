@@ -5,7 +5,7 @@ import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 const description = `
 # Working with Maps using React Native
 
-- Settup Map Views in Expo
+- Setup Map Views in Expo
 - Add Points of Interest (POI) to the Map
 - Create a scrollable carousel for POIs
 - Synchronize the Carousel with the Map
