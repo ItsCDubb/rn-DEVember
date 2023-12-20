@@ -3,15 +3,14 @@ import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 
 const description = `
-# Swipe Animation
+# Working with Swipe Gestures in React Native
 
-📚 Today's Agenda:
-- Designing the Swipe animation made famous by Tinder in React Native
-- Building the Basic Swipe Animation
+- Design the Swipe animation made famous by Tinder in React Native
+- Build the Basic Swipe Animation
 - Advanced Techniques with Reanimated
-- Customizing the Swipe Animation
-- Handling User Interaction and Gestures
-- Integrating the Animation with App Logic
+- Customize the Swipe Animation
+- Handle User Interaction and Gestures
+- Integrate the Animation with App Logic
 `;
 
 const DayDetailsScreen = () => {

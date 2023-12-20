@@ -1,25 +1,24 @@
-import { Text, View } from "react-native";
-import { Stack } from "expo-router";
+import { Button, SafeAreaView, Text, View } from "react-native";
+import { Link, Stack } from "expo-router";
+import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
+
+const description = `
+# Setting up the Expo & React Native development environment
+
+   - Setup your development environment.
+   - Create a new project with Expo.
+   - Explore Expo Router.
+   - Building the core of the app:
+     - Display Lists, Styling, Screen Navigation.
+     - Effective project structure for development.
+`;
 
 const DayDetailsScreen = () => {
   return (
-    <View>
-      <Stack.Screen options={{ title: "Day 1: Avent Calendar" }} />
-      <Text style={{ fontFamily: "AmaticBold", fontSize: 60 }}>
-        React Native & Expo Setup
-      </Text>
-      <Text style={{ paddingBottom: 5, fontFamily: "Inter", fontSize: 30 }}>
-        Advent Calendar
-      </Text>
-      <View>
-        <Text style={{ padding: 7 }}>
-          Today an Advent Calendar for the projects that will be built during
-          this entire month was created. Setup the environment for both React
-          Native & Expo. During this I added both the Amatic & Inter fonts from
-          Google.
-        </Text>
-      </View>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Stack.Screen options={{ title: "Day 1: The Advent Calendar" }} />
+      <MarkdownDisplay>{description}</MarkdownDisplay>
+    </SafeAreaView>
   );
 };
 

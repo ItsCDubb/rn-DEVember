@@ -3,15 +3,12 @@ import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 
 const description = `
-# Onboarding
+# Work with Onboarding Screens in React Native
 
-📚 Today's Agenda:
-- Introduction to Onboarding Flows
-- Design Principles for Onboarding Screens
-- Exploring Reanimated Library
-- Building Your First Animated Onboarding Screen
-- Enhancing User Experience with Layout Animations
-- Interactive Session: Q&A and Live Coding
+- Design principles for Onboarding Screens
+- Explore Reanimated Library
+- Build animated onboarding screens
+- Enhance user experience (UE) with layout animations
 `;
 
 const DayDetailsScreen = () => {

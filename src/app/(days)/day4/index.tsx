@@ -4,13 +4,12 @@ import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 import styles from "./styles";
 
 const description = `
-# Splashscreen
-📚 Today's Agenda:
-- Overview of Splash Screens in Apps
-- Setting Up the Default Splash Screen
-- Designing a Custom Splash Screen
-- Integrating Lottie Animations
-- Configuring Lottie with React Native and Expo
+# Working with a Splashscreen in React Native
+
+- Setup the default Splash Screen
+- Design a custom Splash Screen
+- Integrate Lottie Animations
+- Configure Lottie with React Native and Expo
 - Best Practices for Splash Screen Animations
 `;
 

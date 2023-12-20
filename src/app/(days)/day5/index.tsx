@@ -3,16 +3,14 @@ import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 
 const description = `
-# Maps
+# Working with Maps using React Native
 
-📚 Today's Agenda:
-- Introduction to React Native Maps
-- Setting Up Map Views in Expo
-- Adding Points of Interest to the Map
-- Creating a Scrollable Carousel for POIs
-- Synchronizing the Carousel with the Map
-- Styling Map Components
-- Handling User Interaction with Map and List
+- Settup Map Views in Expo
+- Add Points of Interest (POI) to the Map
+- Create a scrollable carousel for POIs
+- Synchronize the Carousel with the Map
+- Style Map Components
+- Handle User Interaction with Map and List
 `;
 
 const DayDetailsScreen = () => {
