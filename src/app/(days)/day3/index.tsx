@@ -3,23 +3,18 @@ import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 
 const description = `
-# Markdown
+# Work with Markdown in React Native
 
-Integrate Markdown content in **React Native**
-
-📚 Today's Agenda:
-- Introduction to Markdown
 - Markdown Syntax Overview
-- Setting Up React Native for Markdown
-- Implementing Markdown Rendering
-- Styling Markdown Content
+- Setup React Native for Markdown
+- Implement Markdown rendering
+- Styling Markdown content
 - Using Markdown in React Native Components
-- Recap and Q&A Session
 `;
 
 const DayDetailsScreen = () => {
   return (
-    <SafeAreaView edges={["bottom"]} style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <Stack.Screen options={{ title: "Day 3: Markdown" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
       <Link href="/day3/editor" asChild>
