@@ -1,7 +1,7 @@
-import { View } from "react-native";
-import LottieView from "lottie-react-native";
-import { useRef } from "react";
 import Animated, { ZoomOut } from "react-native-reanimated";
+import LottieView from "lottie-react-native";
+import { View } from "react-native";
+import { useRef } from "react";
 
 const AnimatedLottieView = Animated.createAnimatedComponent(LottieView);
 

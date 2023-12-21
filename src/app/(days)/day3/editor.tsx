@@ -1,15 +1,7 @@
-import {
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-} from "react-native";
-import Markdown from "react-native-markdown-display";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
-import { useState } from "react";
+import { Pressable, Text, TextInput, View } from "react-native";
 import { Stack } from "expo-router";
+import { useState } from "react";
 import styles from "./editorStyles";
 
 const template = `# 🎉 Fun with Markdown!

@@ -1,16 +1,13 @@
+import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 import { Button, SafeAreaView } from "react-native";
 import { Link, Stack } from "expo-router";
-import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 
 const description = `
 # Work with the Microphone & Audio Playback 
 
-- Implement Audio Playback Features
-- Integrate Expo Audio with the app
-- Save audio files on the Device
-- Display audio waveforms
-- Design the User Interface
-- Test audio functionality
+## Record & View audio using ***Expo***, ***React Native***, ***React Native Reanimated***, & ***Expo AV***
+
+A screen similar to what would be seen in iOS Voice Memos was created so you can see & hear audio that was recorded.
 `;
 
 const DayDetailsScreen = () => {

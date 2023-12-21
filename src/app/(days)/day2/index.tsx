@@ -1,20 +1,19 @@
-import { Button, SafeAreaView, Text, View } from "react-native";
-import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
+import { Button, SafeAreaView } from "react-native";
+import { Link, Stack } from "expo-router";
 
 const description = `
-# Work with Onboarding Screens in React Native
+# Onboarding Screens
 
-- Design principles for Onboarding Screens
-- Explore Reanimated Library
-- Build animated onboarding screens
-- Enhance user experience (UE) with layout animations
+## Here's a few onboarding screens using ***Expo*** & ***React Native*** as well as swiping gestures
+
+Setup some demo onboarding screens, utilized a couple animations from ***React Native Reanimated***, & some gestures from  ***React Native Gesture Handler***.
 `;
 
 const DayDetailsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack.Screen options={{ title: "Day 2: Onboarding" }} />
+      <Stack.Screen options={{ title: "Day 2" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
       <Link href="/day2/onboarding" asChild>
         <Button title="Onboarding" />

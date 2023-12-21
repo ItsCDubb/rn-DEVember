@@ -1,22 +1,19 @@
-import { Button, SafeAreaView, Text, View } from "react-native";
-import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
-import styles from "./styles";
+import { Button, SafeAreaView } from "react-native";
+import { Link, Stack } from "expo-router";
 
 const description = `
 # Working with a Splashscreen in React Native
 
-- Setup the default Splash Screen
-- Design a custom Splash Screen
-- Integrate Lottie Animations
-- Configure Lottie with React Native and Expo
-- Best Practices for Splash Screen Animations
+## Custom splash screen using ***Lottie*** & ***React Native***
+
+Setup a demo Splashscreen using the one provided by ***Expo*** & an animation from ***Lottie***.
 `;
 
 const DayDetailsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack.Screen options={{ title: "Day 4: Splashscreen" }} />
+      <Stack.Screen options={{ title: "Day 4" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
       <Link href="/day4/animation" asChild>
         <Button title="Animation" />

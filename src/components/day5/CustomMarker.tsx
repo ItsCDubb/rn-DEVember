@@ -1,5 +1,5 @@
-import { Text, View } from "react-native";
 import { Marker } from "react-native-maps";
+import { Text, View } from "react-native";
 import styles from "./styles";
 
 const CustomMarker = ({ apartment, onPress }) => {

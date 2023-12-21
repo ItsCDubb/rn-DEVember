@@ -1,12 +1,12 @@
-import { Button, Text, View } from "react-native";
-import { Stack } from "expo-router";
-import Card from "@/components/day6/Card";
 import {
   runOnJS,
   useAnimatedReaction,
   useSharedValue,
 } from "react-native-reanimated";
 import { useEffect, useState } from "react";
+import { Text, View } from "react-native";
+import Card from "@/components/day6/Card";
+import { Stack } from "expo-router";
 import styles from "./styles";
 
 const dummyUsers = [
