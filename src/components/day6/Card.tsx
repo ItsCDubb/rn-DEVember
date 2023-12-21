@@ -1,5 +1,3 @@
-import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import Animated, {
   interpolate,
   runOnJS,
@@ -9,7 +7,9 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
+import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import { GestureDetector, Gesture } from "react-native-gesture-handler";
+import { LinearGradient } from "expo-linear-gradient";
 import styles from "./styles";
 
 type Card = {

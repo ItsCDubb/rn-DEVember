@@ -1,15 +1,17 @@
-import { Text, View } from "react-native";
-import { FontAwesome5 } from "@expo/vector-icons";
+import { Extrapolate, interpolate } from "react-native-reanimated";
 import { useCallback, useEffect, useState } from "react";
+import { FontAwesome5 } from "@expo/vector-icons";
 import { AVPlaybackStatus, Audio } from "expo-av";
 import { Sound } from "expo-av/build/Audio";
-import Animated, {
-  useAnimatedStyle,
-  withTiming,
-} from "react-native-reanimated";
+import { Text, View } from "react-native";
 import styles from "./styles";
 
-const MemoListItem = ({ uri }: { uri: string }) => {
+export type Memo = {
+  uri: string;
+  metering: number[];
+};
+
+const MemoListItem = ({ memo }: { memo: Memo }) => {
   const [sound, setSound] = useState<Sound>();
 
   const [status, setStatus] = useState<AVPlaybackStatus>();
@@ -17,16 +19,19 @@ const MemoListItem = ({ uri }: { uri: string }) => {
   async function loadSound() {
     console.log("Loading Sound");
     const { sound } = await Audio.Sound.createAsync(
-      { uri },
+      { uri: memo.uri },
       { progressUpdateIntervalMillis: 1000 / 60 },
       onPlaybackStatusUpdate
     );
     setSound(sound);
+    sound.setOnAudioSampleReceived((sample) =>
+      console.log(JSON.stringify(sample, null, 2))
+    );
   }
 
   useEffect(() => {
     loadSound();
-  }, [uri]);
+  }, [memo]);
 
   const onPlaybackStatusUpdate = useCallback(
     async (newStatus: AVPlaybackStatus) => {
@@ -73,9 +78,22 @@ const MemoListItem = ({ uri }: { uri: string }) => {
 
   const progress = position / duration;
 
-  const animatedIndicatorStyle = useAnimatedStyle(() => ({
-    left: `${progress * 100}%`,
-  }));
+  console.log(memo);
+
+  let lines = [];
+  let numLines = 50;
+
+  for (let i = 0; i < numLines; i++) {
+    const meteringIndex = Math.floor((i * memo.metering.length) / numLines);
+    const nextMeteringIndex = Math.ceil(
+      ((i + 1) * memo.metering.length) / numLines
+    );
+    const values = memo.metering.slice(meteringIndex, nextMeteringIndex);
+    const average = values.reduce((sum, a) => sum + a, 0) / values.length;
+    lines.push(average);
+  }
+
+  memo.metering.forEach((db, index) => {});
 
   return (
     <View style={styles.container}>
@@ -86,10 +104,20 @@ const MemoListItem = ({ uri }: { uri: string }) => {
         color={"gray"}
       />
       <View style={styles.playbackContainer}>
-        <View style={styles.playbackBackground} />
-        <Animated.View
-          style={[styles.playbackIndicator, animatedIndicatorStyle]}
-        />
+        <View style={styles.wave}>
+          {lines.map((db, index) => (
+            <View
+              style={[
+                styles.waveLine,
+                {
+                  height: interpolate(db, [-60, 0], [5, 50], Extrapolate.CLAMP),
+                  backgroundColor:
+                    progress > index / lines.length ? "royalblue" : "gainsboro",
+                },
+              ]}
+            />
+          ))}
+        </View>
         <Text
           style={{
             position: "absolute",

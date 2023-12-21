@@ -1,21 +1,19 @@
-import { Button, SafeAreaView, Text, View } from "react-native";
-import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
+import { Button, SafeAreaView } from "react-native";
+import { Link, Stack } from "expo-router";
 
 const description = `
 # Work with Markdown in React Native
 
-- Markdown Syntax Overview
-- Setup React Native for Markdown
-- Implement Markdown rendering
-- Styling Markdown content
-- Using Markdown in React Native Components
+## Screen to edit & view ***Markdown*** in ***React Native***
+
+Setup a screen to edit & view *Markdown* files.
 `;
 
 const DayDetailsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack.Screen options={{ title: "Day 3: Markdown" }} />
+      <Stack.Screen options={{ title: "Day 3" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
       <Link href="/day3/editor" asChild>
         <Button title="Editor" />

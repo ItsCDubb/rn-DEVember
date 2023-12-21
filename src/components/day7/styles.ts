@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   playbackContainer: {
     flex: 1,
     justifyContent: "center",
-    height: 50,
+    height: 80,
   },
   playbackBackground: {
     height: 3,
@@ -36,6 +36,17 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     borderRadius: 10,
     backgroundColor: "royalblue",
+  },
+  wave: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 3,
+  },
+  waveLine: {
+    flex: 1,
+    height: 30,
+    borderRadius: 20,
+    backgroundColor: "gainsboro",
   },
 });
 

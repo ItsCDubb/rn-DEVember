@@ -1,22 +1,21 @@
-import { Button, SafeAreaView, Text, View } from "react-native";
-import { Link, Stack } from "expo-router";
 import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
+import { SafeAreaView } from "react-native";
+import { Stack } from "expo-router";
 
 const description = `
-# Setting up the Expo & React Native development environment
+# Setting up the development environment
 
-   - Setup your development environment.
-   - Create a new project with Expo.
-   - Explore Expo Router.
-   - Building the core of the app:
-     - Display Lists, Styling, Screen Navigation.
-     - Effective project structure for development.
+## Advent Calendar seen on the main page using ***Expo*** & ***React Native***
+
+Setup the development environment & utilized a FlatList from ***React Native*** as well as some things from ***Expo Router*** so navigation from one page to another is allowed.
+
+Each day for 24 days will be a different feature displayed using the Advent Calendar.
 `;
 
 const DayDetailsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack.Screen options={{ title: "Day 1: The Advent Calendar" }} />
+      <Stack.Screen options={{ title: "Day 1" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
     </SafeAreaView>
   );
