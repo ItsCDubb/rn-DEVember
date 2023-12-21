@@ -1,8 +1,6 @@
-# 🎉 Fun with React Native!
+# 🎉 Let's have fun in DEVember!
 
-## 🚀 What is DEVember?
-
-DEVember is a **fun and exciting** challenge during the month of December during the Christmas Holiday Season! We'll dive into **_Expo_** & **_React Native_** and build fun & exciting features!
+🚀 DEVember is a **fun and exciting** challenge during the month of December during the Christmas Holiday Season! We'll dive into **_Expo_** & **_React Native_** and build fun & exciting features!
 
 ### What'll be built during DEVember!
 
