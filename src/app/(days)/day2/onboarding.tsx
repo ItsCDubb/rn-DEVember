@@ -1,20 +1,20 @@
-import { Pressable, SafeAreaView, Text, View } from "react-native";
-import { router, Stack } from "expo-router";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { useState } from "react";
-import { StatusBar } from "expo-status-bar";
-import {
-  GestureDetector,
-  Gesture,
-  Directions,
-} from "react-native-gesture-handler";
 import Animated, {
   FadeIn,
   FadeOut,
   SlideInLeft,
   SlideOutRight,
 } from "react-native-reanimated";
-import styles from "./onboardingstyles";
+import {
+  GestureDetector,
+  Gesture,
+  Directions,
+} from "react-native-gesture-handler";
+import { Pressable, SafeAreaView, Text, View } from "react-native";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { router, Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
+import styles from "../../styles/day2Styles";
 
 const onboardingSteps = [
   {

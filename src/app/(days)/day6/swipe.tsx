@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import Card from "@/components/day6/Card";
 import { Stack } from "expo-router";
-import styles from "./styles";
+import styles from "../../styles/day6Styles";
 
 const dummyUsers = [
   {

@@ -2,7 +2,7 @@ import MarkdownDisplay from "@/components/day3/MarkdownDisplay";
 import { Pressable, Text, TextInput, View } from "react-native";
 import { Stack } from "expo-router";
 import { useState } from "react";
-import styles from "./editorStyles";
+import styles from "../../styles/day3Styles";
 
 const template = `# 🎉 Fun with Markdown!
 

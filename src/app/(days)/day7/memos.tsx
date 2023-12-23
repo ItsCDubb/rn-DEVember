@@ -11,7 +11,7 @@ import { Recording } from "expo-av/build/Audio";
 import { Stack } from "expo-router";
 import { useState } from "react";
 import { Audio } from "expo-av";
-import styles from "./styles";
+import styles from "../../styles/day7Styles";
 
 export default function MemoScreen() {
   const [recording, setRecording] = useState<Recording>();

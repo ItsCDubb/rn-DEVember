@@ -1,12 +1,12 @@
-import { Text, View } from "react-native";
-import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
-import { Stack } from "expo-router";
-import apartments from "@assets/data/day5/data.json";
-import CustomMarker from "@/components/day5/CustomMarker";
-import ApartmentListItem from "@/components/day5/ApartmentListItem";
-import { useMemo, useState } from "react";
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
-import styles from "./styles";
+import ApartmentListItem from "@/components/day5/ApartmentListItem";
+import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
+import CustomMarker from "@/components/day5/CustomMarker";
+import apartments from "@assets/data/day5/data.json";
+import { Text, View } from "react-native";
+import { Stack } from "expo-router";
+import { useMemo, useState } from "react";
+import styles from "../../styles/day5Styles";
 
 export default function MapScreen() {
   const [selectedApartment, setSelectedApartment] = useState(null);

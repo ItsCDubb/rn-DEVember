@@ -5,9 +5,9 @@ import { Stack } from "expo-router";
 const description = `
 # Setting up the development environment
 
-## Advent Calendar seen on the main page using ***Expo*** & ***React Native***
+## Advent Calendar seen on the index page using ***Expo*** & ***React Native***
 
-Setup the development environment & utilized a FlatList from ***React Native*** as well as some things from ***Expo Router*** so navigation from one page to another is allowed.
+Setup of the ***React Native*** development environment & utilized a FlatList from ***React Native*** as well as some things from ***Expo Router*** so navigation from one page to another is allowed.
 
 Each day for 24 days will be a different feature displayed using the Advent Calendar.
 `;
