@@ -5,9 +5,9 @@ import { Link, Stack } from "expo-router";
 const description = `
 # Work with APIs to build a weather tracking service 
 
-## Fetch data from Public APIs using ***Expo*** & ***React Native***,
+## Fetch data from Public APIs using ***Expo*** & ***React Native***
 
-A screen similar to a weather application has been created so you can interact with the data presented.
+A screen similar to a weather application has been created so you can interact with the data presented. I used very basic Lottie animations to add depth to the feature that I created.
 `;
 
 const DayDetailsScreen = () => {

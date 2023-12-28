@@ -14,6 +14,10 @@ import {
 } from "@expo-google-fonts/amatic-sc";
 import AnimatedSplashScreen from "@/components/day4/AnimatedSplashScreen";
 import Animated, { FadeIn } from "react-native-reanimated";
+import amplifyconfig from "@/amplifyconfiguration.json";
+import { Amplify } from "aws-amplify";
+
+Amplify.configure(amplifyconfig);
 
 export default function RootLayout() {
   const [appReady, setAppReady] = useState(false);
