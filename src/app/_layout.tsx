@@ -13,11 +13,40 @@ import {
   AmaticSC_700Bold,
 } from "@expo-google-fonts/amatic-sc";
 import AnimatedSplashScreen from "@/components/day4/AnimatedSplashScreen";
+import { Authenticator, ThemeProvider } from "@aws-amplify/ui-react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import amplifyconfig from "@/amplifyconfiguration.json";
 import { Amplify } from "aws-amplify";
 
 Amplify.configure(amplifyconfig);
+
+const theme = {
+  tokens: {
+    colors: {
+      white: "#fff",
+      black: "#000",
+      background: {
+        // This will resolve to #fff in light mode
+        // and #000 in dark mode because of the override below
+        primary: "{colors.white}",
+      },
+      font: {
+        primary: "{colors.black}",
+      },
+    },
+  },
+  overrides: [
+    {
+      colorMode: "dark",
+      tokens: {
+        colors: {
+          white: "#000",
+          black: "#fff",
+        },
+      },
+    },
+  ],
+};
 
 export default function RootLayout() {
   const [appReady, setAppReady] = useState(false);
@@ -51,12 +80,16 @@ export default function RootLayout() {
   }
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <Animated.View style={{ flex: 1 }} entering={FadeIn}>
-        <Stack screenOptions={{}}>
-          <Stack.Screen name="index" options={{ title: "DEVember" }} />
-        </Stack>
-      </Animated.View>
-    </GestureHandlerRootView>
+    <Authenticator.Provider>
+      <ThemeProvider theme={theme}>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <Animated.View style={{ flex: 1 }} entering={FadeIn}>
+            <Stack screenOptions={{}}>
+              <Stack.Screen name="index" options={{ title: "DEVember" }} />
+            </Stack>
+          </Animated.View>
+        </GestureHandlerRootView>
+      </ThemeProvider>
+    </Authenticator.Provider>
   );
 }

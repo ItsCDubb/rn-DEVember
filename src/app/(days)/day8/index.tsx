@@ -3,7 +3,7 @@ import { Button, SafeAreaView } from "react-native";
 import { Link, Stack } from "expo-router";
 
 const description = `
-# Work with APIs to build a weather tracking service 
+# Work with APIs to build a weather app 
 
 ## Fetch data from Public APIs using ***Expo*** & ***React Native***
 

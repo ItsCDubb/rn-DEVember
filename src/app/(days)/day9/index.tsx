@@ -15,8 +15,8 @@ const DayDetailsScreen = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <Stack.Screen options={{ title: "Day 9: Authentication" }} />
       <MarkdownDisplay>{description}</MarkdownDisplay>
-      <Link href="/day9/auth" asChild>
-        <Button title="Authentication" />
+      <Link href="/day9/protected" asChild>
+        <Button title="Protected App" />
       </Link>
     </SafeAreaView>
   );

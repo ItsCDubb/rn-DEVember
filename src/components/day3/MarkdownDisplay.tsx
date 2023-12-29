@@ -5,7 +5,7 @@ import styles from "./styles";
 
 const markdownStyles = StyleSheet.create({
   heading1: {
-    color: "#212020",
+    color: "#212028",
     fontFamily: "AmaticBold",
     fontSize: 55,
     marginTop: 20,
