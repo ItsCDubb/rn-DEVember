@@ -17,6 +17,7 @@ import { Authenticator, ThemeProvider } from "@aws-amplify/ui-react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
 import amplifyconfig from "@/amplifyconfiguration.json";
 import { Amplify } from "aws-amplify";
+import BiometricsProvider from "@/components/day10/BiometricsProvider";
 
 Amplify.configure(amplifyconfig);
 
@@ -80,16 +81,18 @@ export default function RootLayout() {
   }
 
   return (
-    <Authenticator.Provider>
-      <ThemeProvider theme={theme}>
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <Animated.View style={{ flex: 1 }} entering={FadeIn}>
-            <Stack screenOptions={{}}>
-              <Stack.Screen name="index" options={{ title: "DEVember" }} />
-            </Stack>
-          </Animated.View>
-        </GestureHandlerRootView>
-      </ThemeProvider>
-    </Authenticator.Provider>
+    <BiometricsProvider>
+      <Authenticator.Provider>
+        <ThemeProvider theme={theme}>
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            <Animated.View style={{ flex: 1 }} entering={FadeIn}>
+              <Stack screenOptions={{}}>
+                <Stack.Screen name="index" options={{ title: "DEVember" }} />
+              </Stack>
+            </Animated.View>
+          </GestureHandlerRootView>
+        </ThemeProvider>
+      </Authenticator.Provider>
+    </BiometricsProvider>
   );
 }
